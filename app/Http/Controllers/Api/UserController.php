@@ -104,7 +104,7 @@ class UserController extends Controller
      */
     public function me()
     {
-        return response()->json(auth()->guard('api')->user());
+        return response()->json(JWTAuth::user());
     }
 
     /**

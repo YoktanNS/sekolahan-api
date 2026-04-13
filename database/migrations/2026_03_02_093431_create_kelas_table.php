@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('kode_kelas')->unique();
             $table->string('nama_kelas');
+            $table->string('wali_kelas')->nullable();
             $table->timestamps();
         });
     }

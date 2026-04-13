@@ -28,7 +28,7 @@ class SiswaStoreRequest extends FormRequest
             'nama_ortu'    => 'nullable|string|max:255',
             'phone_number' => 'nullable|string|max:20',
             'gender'       => 'required|in:laki-laki,perempuan',
-            'kelas_id'     => 'required|exists:kelas,id',
+            'kelas_id'     => 'nullable|exists:kelas,id',
             'tempat_lahir' => 'nullable|string',
             'tgl_lahir'    => 'nullable|date',
             'alamat'       => 'nullable|string',

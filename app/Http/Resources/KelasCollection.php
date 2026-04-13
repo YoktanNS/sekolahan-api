@@ -19,6 +19,7 @@ class KelasCollection extends ResourceCollection
                         'data' => [
                             ['name' => 'kode_kelas', 'value' => $kelas->kode_kelas, 'prompt' => 'Kode Kelas'],
                             ['name' => 'nama_kelas', 'value' => $kelas->nama_kelas, 'prompt' => 'Nama Kelas'],
+                            ['name' => 'wali_kelas', 'value' => $kelas->wali_kelas, 'prompt' => 'Wali Kelas'],
                         ],
                     ];
                 }),
@@ -26,6 +27,7 @@ class KelasCollection extends ResourceCollection
                     'data' => [
                         ['name' => 'kode_kelas', 'value' => '', 'prompt' => 'Kode Kelas'],
                         ['name' => 'nama_kelas', 'value' => '', 'prompt' => 'Nama Kelas'],
+                        ['name' => 'wali_kelas', 'value' => '', 'prompt' => 'Wali Kelas'],
                     ]
                 ]
             ]

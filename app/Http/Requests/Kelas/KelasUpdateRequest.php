@@ -28,6 +28,7 @@ class KelasUpdateRequest extends FormRequest
         return [
             'kode_kelas' => 'sometimes|required|string|unique:kelas,kode_kelas,' . $id,
             'nama_kelas' => 'sometimes|required|string|max:255',
+            'wali_kelas' => 'nullable|string|max:255',
         ];
     }
 }

@@ -15,25 +15,27 @@ class KelasResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'kode_kelas' => $this->kode_kelas,
-            'nama_kelas' => $this->nama_kelas,
-            '_links' => [
-                [
-                    'rel' => 'self',
-                    'method' => 'GET',
-                    'href' => route('kelas.show', ['kela' => $this->id])
+            'collection' => [
+                'version' => '1.0',
+                'href'    => route('kelas.show', $this->id),
+                'items'   => [
+                    [
+                        'href' => route('kelas.show', $this->id),
+                        'data' => [
+                            ['name' => 'id', 'value' => $this->id, 'prompt' => 'ID'],
+                            ['name' => 'kode_kelas', 'value' => $this->kode_kelas, 'prompt' => 'Kode Kelas'],
+                            ['name' => 'nama_kelas', 'value' => $this->nama_kelas, 'prompt' => 'Nama Kelas'],
+                            ['name' => 'wali_kelas', 'value' => $this->wali_kelas, 'prompt' => 'Wali Kelas'], // Tambahan
+                        ],
+                    ]
                 ],
-                [
-                    'rel' => 'update',
-                    'method' => 'PUT',
-                    'href' => route('kelas.update', ['kela' => $this->id])
-                ],
-                [
-                    'rel' => 'delete',
-                    'method' => 'DELETE',
-                    'href' => route('kelas.destroy', ['kela' => $this->id])
-                ],
+                'template' => [
+                    'data' => [
+                        ['name' => 'kode_kelas', 'value' => '', 'prompt' => 'Kode Kelas'],
+                        ['name' => 'nama_kelas', 'value' => '', 'prompt' => 'Nama Kelas'],
+                        ['name' => 'wali_kelas', 'value' => '', 'prompt' => 'Wali Kelas'], // Tambahan
+                    ]
+                ]
             ]
         ];
     }

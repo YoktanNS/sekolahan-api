@@ -24,6 +24,7 @@ class KelasStoreRequest extends FormRequest
         return [
             'kode_kelas' => 'required|string|unique:kelas,kode_kelas',
             'nama_kelas' => 'required|string|max:255',
+            'wali_kelas' => 'nullable|string|max:255',
         ];
     }
 }
