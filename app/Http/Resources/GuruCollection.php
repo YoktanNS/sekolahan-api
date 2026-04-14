@@ -17,8 +17,16 @@ class GuruCollection extends ResourceCollection
                     return [
                         'href' => route('guru.show', $guru->id),
                         'data' => [
-                            ['name' => 'nip', 'value' => $guru->nip, 'prompt' => 'NIP Guru'],
-                            ['name' => 'nama', 'value' => $guru->nama, 'prompt' => 'Nama Lengkap'],
+                            ['name' => 'user_id', 'value' => $guru->user_id, 'prompt' => 'ID User Akun'],
+                            ['name' => 'nip', 'value' => $guru->nip, 'prompt' => 'Nomor Induk Pegawai'],
+                            ['name' => 'nama', 'value' => $guru->nama, 'prompt' => 'Nama Lengkap Guru'],
+                            ['name' => 'tempat_lahir', 'value' => $guru->tempat_lahir, 'prompt' => 'Tempat Lahir'],
+                            ['name' => 'tgl_lahir', 'value' => $guru->tgl_lahir, 'prompt' => 'Tanggal Lahir'],
+                            ['name' => 'gender', 'value' => $guru->gender, 'prompt' => 'Gender'],
+                            ['name' => 'phone_number', 'value' => $guru->phone_number, 'prompt' => 'Nomor Telepon'],
+                            ['name' => 'email', 'value' => $guru->email, 'prompt' => 'Alamat Email'],
+                            ['name' => 'alamat', 'value' => $guru->alamat, 'prompt' => 'Alamat Lengkap'],
+                            ['name' => 'pendidikan', 'value' => $guru->pendidikan, 'prompt' => 'Pendidikan Terakhir'],
                         ],
                     ];
                 }),
