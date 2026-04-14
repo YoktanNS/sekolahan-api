@@ -7,17 +7,14 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class MapelResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>
-     */
     public function toArray(Request $request): array
     {
         return [
             'id'          => $this->id,
             'kode_mapel'  => $this->kode_mapel,
             'nama_mapel'  => $this->nama_mapel,
+            'tingkat'     => $this->tingkat,  
+            'deskripsi'   => $this->deskripsi, 
             '_links'      => [
                 [
                     'rel'    => 'self',

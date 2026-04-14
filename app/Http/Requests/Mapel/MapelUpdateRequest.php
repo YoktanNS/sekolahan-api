@@ -27,6 +27,8 @@ class MapelUpdateRequest extends FormRequest
         return [
             'kode_mapel' => 'sometimes|required|string|unique:mapel,kode_mapel,' . $id,
             'nama_mapel' => 'sometimes|required|string|max:255',
+            'tingkat'    => 'nullable|string|max:50',
+            'deskripsi'  => 'nullable|string',
         ];
     }
 }

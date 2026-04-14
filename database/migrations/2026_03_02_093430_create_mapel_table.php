@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('kode_mapel')->unique();
             $table->string('nama_mapel');
+            $table->string('tingkat')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

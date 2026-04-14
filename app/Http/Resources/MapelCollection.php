@@ -19,6 +19,8 @@ class MapelCollection extends ResourceCollection
                         'data' => [
                             ['name' => 'kode_mapel', 'value' => $mapel->kode_mapel, 'prompt' => 'Kode Mapel'],
                             ['name' => 'nama_mapel', 'value' => $mapel->nama_mapel, 'prompt' => 'Nama Mata Pelajaran'],
+                            ['name' => 'tingkat', 'value' => $mapel->tingkat, 'prompt' => 'Tingkat'], // Tambahan
+                            ['name' => 'deskripsi', 'value' => $mapel->deskripsi, 'prompt' => 'Deskripsi'], // Tambahan
                         ],
                     ];
                 }),
@@ -26,6 +28,8 @@ class MapelCollection extends ResourceCollection
                     'data' => [
                         ['name' => 'kode_mapel', 'value' => '', 'prompt' => 'Kode Mata Pelajaran'],
                         ['name' => 'nama_mapel', 'value' => '', 'prompt' => 'Nama Mata Pelajaran'],
+                        ['name' => 'tingkat', 'value' => '', 'prompt' => 'Tingkat Kelas'], // Tambahan
+                        ['name' => 'deskripsi', 'value' => '', 'prompt' => 'Deskripsi Mapel'], // Tambahan
                     ]
                 ]
             ]

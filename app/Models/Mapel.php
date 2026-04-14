@@ -10,6 +10,8 @@ class Mapel extends Model
     protected $fillable = [
         'kode_mapel',
         'nama_mapel',
+        'tingkat',
+        'deskripsi',
     ];
 
     public function jadwals()

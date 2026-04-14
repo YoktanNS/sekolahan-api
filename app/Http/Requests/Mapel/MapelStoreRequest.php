@@ -24,6 +24,8 @@ class MapelStoreRequest extends FormRequest
         return [
             'kode_mapel' => 'required|string|unique:mapel,kode_mapel',
             'nama_mapel' => 'required|string|max:255',
+            'tingkat'    => 'nullable|string|max:50',
+            'deskripsi'  => 'nullable|string',
         ];
     }
 }
