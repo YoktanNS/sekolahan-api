@@ -20,14 +20,13 @@ class JadwalUpdateRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
-    { {
-            return [
-                'guru_id'       => 'sometimes|required|exists:guru,id',
-                'mapel_id'      => 'sometimes|required|exists:mapel,id',
-                'kelas_id'      => 'sometimes|required|exists:kelas,id',
-                'hari'          => 'sometimes|required|string|in:senin,selasa,rabu,kamis,jumat,sabtu',
-                'jam_pelajaran' => 'sometimes|required|string',
-            ];
-        }
+    { 
+        return [
+            'guru_id'       => 'sometimes|required|exists:guru,id',
+            'mapel_id'      => 'sometimes|required|exists:mapel,id',
+            'kelas_id'      => 'sometimes|required|exists:kelas,id',
+            'hari'          => 'sometimes|required|string|in:senin,selasa,rabu,kamis,jumat,sabtu',
+            'jam_pelajaran' => 'sometimes|required|string',
+        ];
     }
 }

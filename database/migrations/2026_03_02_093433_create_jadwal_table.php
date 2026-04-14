@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jadwal', function (Blueprint $table) {
+        Schema::create('jadwals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kelas_id')->constrained('kelas')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('mapel_id')->constrained('mapel')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('guru_id')->constrained('guru')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->enum('hari', ['senin','selasa','rabu','kamis','jumat','sabtu']);
-            $table->string('jam_pelajaran');
+            $table->string('hari'); 
+            $table->time('jam_mulai');
+            $table->time('jam_selesai');
+            
+            $table->unsignedBigInteger('mapel_id');
+            $table->unsignedBigInteger('guru_id');
+            $table->unsignedBigInteger('kelas_id');
+            
             $table->timestamps();
         });
     }

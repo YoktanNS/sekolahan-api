@@ -17,8 +17,17 @@ class JadwalCollection extends ResourceCollection
                     return [
                         'href' => route('jadwal.show', $jadwal->id),
                         'data' => [
+                            // Data Mentah (Untuk Form Edit)
                             ['name' => 'hari', 'value' => $jadwal->hari, 'prompt' => 'Hari'],
                             ['name' => 'jam_pelajaran', 'value' => $jadwal->jam_pelajaran, 'prompt' => 'Jam Pelajaran'],
+                            ['name' => 'kelas_id', 'value' => $jadwal->kelas_id, 'prompt' => 'ID Kelas'],
+                            ['name' => 'mapel_id', 'value' => $jadwal->mapel_id, 'prompt' => 'ID Mapel'],
+                            ['name' => 'guru_id', 'value' => $jadwal->guru_id, 'prompt' => 'ID Guru'],
+                            
+                            // Data Relasi (Untuk Ditampilkan di Tabel)
+                            ['name' => 'nama_kelas', 'value' => $jadwal->kelas ? $jadwal->kelas->nama_kelas : '-', 'prompt' => 'Nama Kelas'],
+                            ['name' => 'nama_mapel', 'value' => $jadwal->mapel ? $jadwal->mapel->nama_mapel : '-', 'prompt' => 'Nama Mapel'],
+                            ['name' => 'nama_guru', 'value' => $jadwal->guru ? $jadwal->guru->nama : '-', 'prompt' => 'Nama Guru'],
                         ],
                     ];
                 }),

@@ -13,7 +13,7 @@ class JadwalController extends Controller
 {
     public function index()
     {
-        $jadwal = Jadwal::with(['guru', 'mapel', 'kelas'])->paginate(10);
+        $jadwal = Jadwal::with(['mapel', 'guru', 'kelas'])->paginate(10);
         return new JadwalCollection($jadwal);
     }
 
